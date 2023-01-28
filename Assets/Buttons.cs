@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AndroidCode : MonoBehaviour
+public class Buttons : MonoBehaviour
 {
 
     public int count = 0;
@@ -12,7 +13,7 @@ public class AndroidCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,5 +28,15 @@ public class AndroidCode : MonoBehaviour
         txt.text = "Pressed " + count + " times";
     }
 
+    public void OnClick2()
+    {
+        txt.text = "Launching dsa.app2.Activity3";        
+        Android.LaunchActivity("dsa.app2", "dsa.app2.Activity3", "This cames from Unity");
+    }
+
+    public void OnClick3()
+    {
+        Android.SetResultAndFinish("Unity exited!");
+    }
 
 }
