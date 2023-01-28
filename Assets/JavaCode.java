@@ -3,10 +3,6 @@ import android.content.ComponentName;
 import android.content.Intent;
 import com.unity3d.player.UnityPlayer;
 
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-
 public class JavaCode {
     public static int add(int a, int b) {
         return a+b;
