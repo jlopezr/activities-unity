@@ -39,4 +39,10 @@ public class Buttons : MonoBehaviour
         Android.SetResultAndFinish("Unity exited!");
     }
 
+    public void OnClick4()
+    {
+        txt.text = "Launching AuxiliarActivity";
+        Android.LaunchActivity("dsa.app3", "AuxiliarActivity", "Data to auxiliar activity");
+    }
+
 }
