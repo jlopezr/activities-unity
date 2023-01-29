@@ -25,15 +25,12 @@ public class JavaCode {
         UnityPlayer.currentActivity.startActivity(i);
     }
 
-    public static String launchActivityAndGetResult(String pkg, String activity, String data) {
+    public static void launchActivityForResult(String pkg, String activity, String data) {
         Intent i = new Intent();
         i.setComponent(new ComponentName(pkg, activity));
         if(data!=null) {
             i.putExtra("input",data);
         }        
         UnityPlayer.currentActivity.startActivityForResult(i, 1); // Request code is hardwired to 1
-
-
-        return null;
     }
 }

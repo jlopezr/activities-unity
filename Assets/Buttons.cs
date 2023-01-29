@@ -41,8 +41,16 @@ public class Buttons : MonoBehaviour
 
     public void OnClick4()
     {
-        txt.text = "Launching AuxiliarActivity";
-        Android.LaunchActivity("dsa.app3", "AuxiliarActivity", "Data to auxiliar activity");
+        txt.text = "Launching dsa.app2.Activity3 for result!";        
+        Android.LaunchActivityForResult("dsa.app2", "dsa.app2.Activity3", "This cames from Unity");
+    }
+
+    public void OnActivityResult(String result)
+    {
+        if(result!=null)
+        {
+            txt.text = result;
+        }
     }
 
 }

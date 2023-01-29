@@ -42,4 +42,12 @@ public class Android
         javacode.CallStatic("launchActivity", args);
     }
 
+    public static void LaunchActivityForResult(String pkg, String activity, String input)
+    {
+        AndroidJavaClass javacode = new AndroidJavaClass("JavaCode");
+        object[] args = { pkg, activity, input };
+        javacode.CallStatic("launchActivityForResult", args);
+    }
+
+
 }
